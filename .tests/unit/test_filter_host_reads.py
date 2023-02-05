@@ -15,8 +15,8 @@ def test_filter_host_reads():
 
     with TemporaryDirectory() as tmpdir:
         workdir = Path(tmpdir) / "workdir"
-        data_path = PurePosixPath("/pbtech_mounts/homes064/lam4003/bin/camp_short-read-quality-control/.tests/unit/filter_host_reads/data")
-        expected_path = PurePosixPath("/pbtech_mounts/homes064/lam4003/bin/camp_short-read-quality-control/.tests/unit/filter_host_reads/expected")
+        data_path = PurePosixPath("./.tests/unit/filter_host_reads/data")
+        expected_path = PurePosixPath("./.tests/unit/filter_host_reads/expected")
 
         # Copy data to the temporary workdir.
         shutil.copytree(data_path, workdir)
@@ -34,9 +34,8 @@ def test_filter_host_reads():
             "-j1",
             "--keep-target-files",
             "--configfile",
-            /pbtech_mounts/homes064/lam4003/bin/camp_short-read-quality-control/configs/parameters.yaml
-            /pbtech_mounts/homes064/lam4003/bin/camp_short-read-quality-control/configs/resources.yaml
-    
+            "./configs/parameters.yaml",
+            "./configs/resources.yaml",
             "--use-conda",
             "--directory",
             workdir,

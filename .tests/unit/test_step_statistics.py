@@ -15,8 +15,8 @@ def test_step_statistics():
 
     with TemporaryDirectory() as tmpdir:
         workdir = Path(tmpdir) / "workdir"
-        data_path = PurePosixPath("/pbtech_mounts/homes064/lam4003/bin/camp_short-read-quality-control/.tests/unit/step_statistics/data")
-        expected_path = PurePosixPath("/pbtech_mounts/homes064/lam4003/bin/camp_short-read-quality-control/.tests/unit/step_statistics/expected")
+        data_path = PurePosixPath("./.tests/unit/step_statistics/data")
+        expected_path = PurePosixPath("./.tests/unit/step_statistics/expected")
 
         # Copy data to the temporary workdir.
         shutil.copytree(data_path, workdir)
@@ -34,9 +34,8 @@ def test_step_statistics():
             "-j1",
             "--keep-target-files",
             "--configfile",
-            /pbtech_mounts/homes064/lam4003/bin/camp_short-read-quality-control/configs/parameters.yaml
-            /pbtech_mounts/homes064/lam4003/bin/camp_short-read-quality-control/configs/resources.yaml
-    
+            "./configs/parameters.yaml",
+            "./configs/resources.yaml",
             "--use-conda",
             "--directory",
             workdir,
