@@ -1,2 +1,2 @@
 sample_name,illumina_fwd,illumina_rev
-sample_name,/path/to/data/sample_1.fastq.gz,/path/to/data/sample_2.fastq.gz
+cultureID_90806,/scratch/alpine/.colostate.edu/jamesrh/CAMP_2024/raw_data/cultureID_90806_S142_R1_001.fastq.gz,/scratch/alpine/.colostate.edu/jamesrh/CAMP_2024/raw_data/cultureID_90806_S142_R2_001.fastq.gz

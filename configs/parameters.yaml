@@ -14,7 +14,7 @@ dedup:      False
 # --- filter_adapters --- #
 
 # '/path/to/camp_short-read-quality-control/workflow/ext/common_adapters.txt'
-adapters: ''
+adapters: '/scratch/alpine/.colostate.edu/jamesrh/CAMP_2024/camp_short-read-quality-control/workflow/ext/common_adapters.txt'
 
 
 # --- filter_host_reads --- #

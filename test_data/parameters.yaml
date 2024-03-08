@@ -14,7 +14,7 @@ dedup:      False
 # --- filter_adapters --- #
 
 # '/path/to/camp_short-read-quality-control/workflow/ext/common_adapters.txt'
-adapters: ''
+adapters: '/scratch/alpine/.colostate.edu/jamesrh/CAMP_2024/camp_short-read-quality-control/workflow/ext/common_adapters.txt'
 
 
 # --- filter_host_reads --- #
@@ -22,7 +22,7 @@ adapters: ''
 use_host_filter:         True
 
 # '/path/to/GRCh38_28122022/GCA_000001405.15_GRCh38_genomic'
-host_reference_database: ''
+host_reference_database: '/scratch/alpine/.colostate.edu/jamesrh/CAMP_2024/GCA_000001405.15_GRCh38_genomic'
 
 
 # --- filter_seq_errors --- #

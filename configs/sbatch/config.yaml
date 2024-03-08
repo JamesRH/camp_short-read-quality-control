@@ -1,13 +1,25 @@
 cluster:
+  mkdir -p logs/{rule} &&
   sbatch
-    --cpus-per-task={threads}
+    --account=csu73_alpine1
+    --partition=amilan
+    --nodes=1
+    --ntasks-per-node={threads}
     --mem={resources.mem_mb}
-    --job-name={wildcards}.{rulename}.{jobid}
-    --output={log}
+    --job-name=smk-{wildcards}.{rulename}.{jobid}
+    --output=logs/{rule}/{rule}-{wildcards}-%j.out
 cluster-cancel:
   scancel
 default-resources:
   - mem_mb=8000
-  - disk_mb=200000
+restart-times: 3
+max-jobs-per-second: 1
 max-status-checks-per-second: 1
-
+local-cores: 1
+latency-wait: 60
+jobs: 500
+keep-going: True
+rerun-incomplete: True
+printshellcmds: True
+scheduler: greedy
+use-conda: True
